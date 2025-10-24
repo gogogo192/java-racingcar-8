@@ -17,7 +17,6 @@ public class InputView {
         return carNames;
     }
     public int playInput(){
-        while (true) {
             System.out.println("시도할 횟수는 몇 회인가요?");
             String input = Console.readLine();
             if (!isNumeric(input)) {
@@ -29,7 +28,6 @@ public class InputView {
                 throw new IllegalArgumentException("시도 횟수는 1 이상이어야 합니다.");
             }
             return attempts;
-        }
     }
     private boolean isNumeric(String str) {
         if (str == null || str.isEmpty()) return false;
