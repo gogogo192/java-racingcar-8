@@ -11,10 +11,10 @@ public class Car {
         this.position = 0;
     }
 
-    public void move(int number){
-        number = Randoms.pickNumberInRange(0, 9);
-        if(number>4){
-            this.position++;
+    public void move(){
+        int randomnumber = Randoms.pickNumberInRange(0, 9);
+        if(randomnumber>4){
+            position++;
         }
     }
     public String getName(){
