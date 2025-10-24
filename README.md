@@ -48,7 +48,6 @@ racingcar
  ├── OutputView.java      // 게임 진행 및 결과 출력 담당
  ├── Car.java             // 자동차의 상태와 이동 로직
  ├── RacingGame.java      // 게임 전체 로직 (이동 반복, 우승자 계산)
- └── RandomNumber.java    // 0~9 랜덤값 생성 유틸
 
 
 
