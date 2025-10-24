@@ -13,10 +13,26 @@ public class InputView {
         return carNames;
     }
     public int playInput(){
-        System.out.println("시도할 횟수는 몇 회인가요?");
-        String input = Console.readLine();
-        int attempts = Integer.parseInt(input);
-
-        return attempts;
+        while (true) {
+            System.out.println("시도할 횟수는 몇 회인가요?");
+            String input = Console.readLine();
+            if (!isNumeric(input)) { // depth 1
+                System.out.println("숫자를 입력해야 합니다. 다시 입력해주세요.");
+                continue;
+            }
+            int attempts = Integer.parseInt(input);
+            if (attempts <= 0) {
+                System.out.println("시도 횟수는 1 이상이어야 합니다. 다시 입력해주세요.");
+                continue;
+            }
+            return attempts;
+        }
+    }
+    private boolean isNumeric(String str) {
+        if (str == null || str.isEmpty()) return false;
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) return false;
+        }
+        return true; // depth 1
     }
 }
