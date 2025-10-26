@@ -6,7 +6,7 @@
 
         public void roundResultPrint(Car[] cars){
             for(int a=0; a< cars.length; a++){
-                System.out.println(cars[a].getName()+ ":" +"-".repeat(cars[a].getPosition()));
+                System.out.println(cars[a].getName()+ " : " +"-".repeat(cars[a].getPosition()));
             }
             System.out.println();
         }

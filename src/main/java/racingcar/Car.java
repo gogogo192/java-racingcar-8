@@ -13,7 +13,7 @@ public class Car {
 
     public void move(){
         int randomnumber = Randoms.pickNumberInRange(0, 9);
-        if(randomnumber>4){
+        if(randomnumber >=4){
             position++;
         }
     }
