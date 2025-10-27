@@ -40,6 +40,23 @@ class PersonalTest extends NsTest {
                 MOVING_FORWARD, MOVING_FORWARD
         );
     }
+    @Test
+    void 예외_테스트_자동차이름5자초과() {
+        assertSimpleTest(() ->
+                assertThatThrownBy(() -> runException("pobi,woniislong", "1"))
+                        .isInstanceOf(IllegalArgumentException.class)
+                        .hasMessageContaining("자동차 이름은 1~5글자여야 합니다")
+        );
+    }
+
+    @Test
+    void 예외_테스트_자동차이름빈문자열() {
+        assertSimpleTest(() ->
+                assertThatThrownBy(() -> runException("pobi,,woni", "1"))
+                        .isInstanceOf(IllegalArgumentException.class)
+                        .hasMessageContaining("자동차 이름은 1~5글자여야 합니다")
+        );
+    }
 
 
     @Test
